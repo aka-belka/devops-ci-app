@@ -23,7 +23,7 @@
 
 - name: Wait for application health
   ansible.builtin.uri:
-    url: "http://127.0.0.5001:{{ app_host_port }}/health"
+    url: "http://127.0.0.1:{{ app_host_port }}/health"
     return_content: true
   register: app_health
   retries: 15
